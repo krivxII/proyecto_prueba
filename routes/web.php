@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\operationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/operacion', function () {
-    return "vamos ";
-});
+Route::get('/operaciones/suma/{elemento1}/{elemento2}',[operationController::class,"suma"]);
+Route::get('/operaciones/resta/{elemento1}/{elemento2}',[operationController::class,"resta"]);
+Route::get('/operaciones/division/{elemento1}/{elemento2}',[operationController::class,"division"]);
+Route::get('/operaciones/multiplicacion/{elemento1}/{elemento2}',[operationController::class,"multiplicacion"]);
