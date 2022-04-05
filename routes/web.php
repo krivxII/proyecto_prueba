@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/operaciones/suma/{elemento1}/{elemento2}',[operationController::class,"suma"]);
-Route::get('/operaciones/resta/{elemento1}/{elemento2}',[operationController::class,"resta"]);
-Route::get('/operaciones/division/{elemento1}/{elemento2}',[operationController::class,"division"]);
-Route::get('/operaciones/multiplicacion/{elemento1}/{elemento2}',[operationController::class,"multiplicacion"]);
+Route::get('/operaciones/suma/{elemento1}/{elemento2}',[operationController::class,"suma"])->whereNumber('elemento1')->whereNumber('elemento2');
+Route::get('/operaciones/resta/{elemento1}/{elemento2}',[operationController::class,"resta"])->whereNumber('elemento1')->whereNumber('elemento2');
+Route::get('/operaciones/division/{elemento1}/{elemento2}',[operationController::class,"division"])->whereNumber('elemento1')->whereNumber('elemento2');
+Route::get('/operaciones/multiplicacion/{elemento1}/{elemento2}',[operationController::class,"multiplicacion"])->whereNumber('elemento1')->whereNumber('elemento2');

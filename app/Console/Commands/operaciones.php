@@ -18,7 +18,7 @@ class operaciones extends Command
      *
      * @var string
      */
-    protected $description = 'Command description';
+    protected $description = 'operaciones aritmeticas basicas';
 
     /**
      * Create a new command instance.
