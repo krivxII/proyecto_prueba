@@ -18,5 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/operacion', function () {
-    return "entramos";
+    return "vamos ";
 });
