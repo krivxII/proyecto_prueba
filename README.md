@@ -8,6 +8,3 @@ Se exponen las sigiente rutas todas con el verbo Get:
 
 los parametros solo permiten string int int respectivamente
 
-## Falta
-
-Pasar las respuestas de texto plano a json

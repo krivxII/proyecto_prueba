@@ -35,7 +35,9 @@ class operationController extends Controller
                 break;
              case "division":
                 return  ($operando2==0) ?
-                            "division por 0" 
+                            response()->json([
+                                'error' => 'division por 0',
+                            ])
                             :  
                             response()->json([
                                 'operacion' => $operacion,
