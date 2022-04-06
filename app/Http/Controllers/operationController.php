@@ -6,6 +6,26 @@ use Illuminate\Http\Request;
 
 class operationController extends Controller
 {
+    
+    public function operar ($operacion,$elemento1,$elemento2){
+        switch ($operacion) {
+            case "suma":
+                return Calculator::suma($elemento1,$elemento2);   
+                break;
+            case "resta":
+                return  Calculator::resta($elemento1,$elemento2);
+                break;
+            case "multiplicacion":
+                return  Calculator::multiplicacion($elemento1,$elemento2); 
+                break;
+             case "division":
+                return  ($elemento2==0) ? "division por 0" :  Calculator::division($elemento1,$elemento2);
+                break;
+            default:
+               return "la operacion no existe";
+        }
+    return Calculator::suma($elemento1,$elemento2);       
+    }
     public function suma ($elemento1,$elemento2){
     return Calculator::suma($elemento1,$elemento2);       
     }
