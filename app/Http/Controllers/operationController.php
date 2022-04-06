@@ -24,8 +24,8 @@ class operationController extends Controller
             default:
                return "la operacion no existe";
         }
-    return Calculator::suma($elemento1,$elemento2);       
     }
+   /*       
     public function suma ($elemento1,$elemento2){
     return Calculator::suma($elemento1,$elemento2);       
     }
@@ -37,5 +37,5 @@ class operationController extends Controller
     }
     public function division ($elemento1,$elemento2){
     return  ($elemento2==0) ? "division por 0" :  Calculator::division($elemento1,$elemento2);
-    }
+    */
 }
